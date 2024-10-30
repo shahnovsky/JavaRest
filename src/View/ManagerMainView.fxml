@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.ManagerMainView">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="226.0" layoutY="29.0" text="Manager View" textFill="#ab1010">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="590.0" layoutY="349.0" mnemonicParsing="false" onAction="#switchToScenceLogIn" text="Log Out" />
+      <Button layoutX="449.0" layoutY="175.0" mnemonicParsing="false" onAction="#switchToScenceUpdatePersonData" prefHeight="50.0" prefWidth="200.0" text="Update persons">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="449.0" layoutY="111.0" mnemonicParsing="false" onAction="#switchToScenceQueries" prefHeight="50.0" prefWidth="200.0" text="Queries">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="editing" layoutX="23.0" layoutY="240.0" mnemonicParsing="false" onAction="#switchToScenceEditDish" prefHeight="50.0" prefWidth="200.0" text="Edit Dish">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="menu" layoutX="23.0" layoutY="111.0" mnemonicParsing="false" onAction="#switchToScenceMenu" prefHeight="50.0" prefWidth="200.0" text="Menu">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="addNewDish" layoutX="23.0" layoutY="175.0" mnemonicParsing="false" onAction="#switchToScenceAddNewDish" prefHeight="50.0" prefWidth="200.0" text="Add new dish">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="manageOrders" layoutX="236.0" layoutY="175.0" mnemonicParsing="false" onAction="#switchToScenceManagerOrders" prefHeight="50.0" prefWidth="200.0" text="Manage Orders">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="238.0" layoutY="240.0" mnemonicParsing="false" onAction="#switchToScenceEditAreas" prefHeight="50.0" prefWidth="200.0" text="Edit Areas">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="addComponent" layoutX="454.0" layoutY="240.0" mnemonicParsing="false" onAction="#switchToScenceAddComponent" prefHeight="50.0" prefWidth="200.0" text="Manage Component">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="cookExpertise" layoutX="23.0" layoutY="299.0" mnemonicParsing="false" onAction="#switchToScenceCookByExpertise" prefHeight="50.0" prefWidth="200.0" text="Cook By Expertise">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="switchToScenceManageDeliveries" layoutX="236.0" layoutY="112.0" mnemonicParsing="false" onAction="#switchToScenceManageDeliveries" prefHeight="50.0" prefWidth="200.0" text="Manage Deliveries">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="240.0" layoutY="298.0" mnemonicParsing="false" onAction="#switchToScenceManageAreas" prefHeight="50.0" prefWidth="200.0" text="Add Area">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

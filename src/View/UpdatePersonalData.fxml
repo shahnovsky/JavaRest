@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.UpdatePersonalData">
+   <children>
+      <TableView fx:id="dataTable" layoutX="25.0" layoutY="126.0" prefHeight="204.0" prefWidth="555.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="24.0" text="ID" />
+          <TableColumn fx:id="firstName" text="First Name" />
+            <TableColumn fx:id="lastName" text="Last Name" />
+            <TableColumn fx:id="birthDate" text="Birth Date" />
+            <TableColumn fx:id="gender" text="Gender" />
+        </columns>
+      </TableView>
+      <Button fx:id="addDeliveryPerson" layoutX="238.0" layoutY="346.0" mnemonicParsing="false" onAction="#openNewAddDeliveryPersonWindow" text="Add Delivery Person" />
+      <Button fx:id="back" layoutX="737.0" layoutY="415.0" mnemonicParsing="false" onAction="#switchToScenceManagerMainView" text="Back" />
+      <Button fx:id="addCustomer" layoutX="120.0" layoutY="346.0" mnemonicParsing="false" onAction="#switchToScenceAddCustomer" text="Add Customer" />
+      <Button fx:id="addCook" layoutX="25.0" layoutY="346.0" mnemonicParsing="false" onAction="#switchToScenceAddCook" text="Add Cook" />
+      <RadioButton fx:id="cusromersRB" layoutX="33.0" layoutY="94.0" mnemonicParsing="false" onAction="#buttonselected" text="Customers">
+         <toggleGroup>
+            <ToggleGroup fx:id="personType" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="deliveryPersonRB" layoutX="151.0" layoutY="94.0" mnemonicParsing="false" onAction="#buttonselected" text="Delivery persons" toggleGroup="$personType" />
+      <RadioButton fx:id="cooksRB" layoutX="311.0" layoutY="94.0" mnemonicParsing="false" onAction="#buttonselected" text="Cooks" toggleGroup="$personType" />
+      <Button fx:id="addToBlackList" layoutX="663.0" layoutY="145.0" mnemonicParsing="false" onAction="#setCustomertoBlackList" text="Add to Black List" />
+      <Button fx:id="removePerson" layoutX="666.0" layoutY="185.0" mnemonicParsing="false" onAction="#removePerson" text="Remove person" />
+      <Label alignment="CENTER" layoutX="334.0" layoutY="31.0" text="Manage customers, delivey persons and cooks" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

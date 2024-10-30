@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.RemovingArea">
+
+   <children>
+      <Label alignment="CENTER" layoutX="205.0" layoutY="66.0" text="Removing Area" textFill="#da1212" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <VBox layoutX="63.0" layoutY="69.0" prefHeight="227.0" prefWidth="435.0">
+         <children>
+            <Label alignment="CENTER" text="Are you sure you want to remove this area?">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="If so,">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="all neighborhoods">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="all delivery persons">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="and all deliveries">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="will be moved to the new designated  area.">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="Please select area to move to, or click &quot;Back&quot;.">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Button fx:id="removeAreaButton" layoutX="248.0" layoutY="351.0" mnemonicParsing="false" onAction="#removeArea" text="Remove Area" />
+      <ComboBox fx:id="areas" layoutX="206.0" layoutY="296.0" prefHeight="25.0" prefWidth="207.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="573.0" prefWidth="819.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.OrdersManager">
+   <children>
+      <TableView fx:id="ordersTable" layoutX="15.0" layoutY="100.0" prefHeight="404.0" prefWidth="489.0">
+         <columns>
+            <TableColumn fx:id="orderId" prefWidth="75.0" text="Order ID" />
+            <TableColumn fx:id="customerName" prefWidth="78.0" text="Customer" />
+            <TableColumn fx:id="deliveryNo" prefWidth="86.0" text="Delivery No." />
+            <TableColumn fx:id="isSent" prefWidth="65.0" text="Sent?" />
+            <TableColumn fx:id="areaColumn" text="Area" />
+            <TableColumn fx:id="typeColumn" prefWidth="104.0" text="Type" />
+         </columns>
+      </TableView>
+      <Label layoutX="15.0" layoutY="37.0" text="Orders Management">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <Button fx:id="back" layoutX="726.0" layoutY="37.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
+      <Pane fx:id="orderPane" layoutX="494.0" layoutY="100.0" prefHeight="452.0" prefWidth="311.0">
+         <children>
+            <Button fx:id="assignDeliveryButton" disable="true" layoutX="63.0" layoutY="381.0" mnemonicParsing="false" onAction="#assignDelivery" text="Manually assign to existing delivery" />
+            <Label layoutX="14.0" layoutY="27.0" text="Order ID:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="thisOrderId" disable="true" layoutX="146.0" layoutY="27.0" />
+            <Label layoutX="14.0" layoutY="52.0" text="Customer Name:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="thisCustomerName" disable="true" layoutX="146.0" layoutY="52.0" />
+            <Label layoutX="14.0" layoutY="77.0" text="Deliver Number:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="thisDeliveryNumber" disable="true" layoutX="146.0" layoutY="77.0" />
+            <CheckBox fx:id="thisSentToCustomer" disable="true" layoutX="80.0" layoutY="112.0" mnemonicParsing="false" text="Sent to the customer" />
+            <Label layoutX="16.0" layoutY="146.0" text="Dishes:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TableView fx:id="thisDishes" layoutX="16.0" layoutY="171.0" prefHeight="200.0" prefWidth="181.0">
+              <columns>
+                <TableColumn fx:id="thisDishesDishName" prefWidth="179.0" text="Dish" />
+              </columns>
+            </TableView>
+            <Button fx:id="delDish" disable="true" layoutX="213.0" layoutY="246.0" mnemonicParsing="false" onAction="#deleteDishFromList" prefWidth="90.0" text="Remove dish" />
+            <Button fx:id="addDish" layoutX="213.0" layoutY="214.0" mnemonicParsing="false" onAction="#addDishToList" prefWidth="90.0" text="Add dish" />
+            <Button fx:id="removeOrderButton" layoutX="120.0" layoutY="413.0" mnemonicParsing="false" onAction="#removeOrder" text="Remove Order" />
+         </children>
+      </Pane>
+      <Button fx:id="aiButton" layoutX="71.0" layoutY="515.0" mnemonicParsing="false" onAction="#swtichToAI" text="Automatically assign deliveries">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

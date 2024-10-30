@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Q1">
+   <children>
+      <Text layoutX="52.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery person" />
+      <Text layoutX="57.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Month" />
+      <Button fx:id="OK" layoutX="396.0" layoutY="133.0" mnemonicParsing="false" onAction="#getRelevantList" text="Ok" />
+      <Button fx:id="back" layoutX="588.0" layoutY="450.0" mnemonicParsing="false" onAction="#switchToScenceQueriesHome" text="Back" />
+      <ComboBox fx:id="deliveryPersonList" layoutX="150.0" layoutY="121.0" prefWidth="150.0" />
+      <ComboBox fx:id="monthList" layoutX="150.0" layoutY="169.0" prefWidth="150.0" />
+      <ScrollPane layoutX="41.0" layoutY="256.0" prefHeight="186.0" prefWidth="588.0">
+         <content>
+            <TableView fx:id="resultsTable" prefHeight="193.0" prefWidth="562.0">
+              <columns>
+                <TableColumn fx:id="deliveryDay" prefWidth="90.0" text="Delivery Day" />
+                <TableColumn fx:id="deliveryID" prefWidth="60.0" text="ID" />
+                  <TableColumn fx:id="ordersInDelivery" prefWidth="300.0" text="Regular Orders in Delivery" />
+                  <TableColumn fx:id="expressOrders" prefWidth="111.0" text="Express orders" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Label alignment="CENTER" layoutX="272.0" layoutY="25.0" text="Please choose relevent parameters for your query:" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

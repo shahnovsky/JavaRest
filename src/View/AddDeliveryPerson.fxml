@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="373.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AddDeliveryPerson">
+   <children>
+      <Text layoutX="62.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What Vehicle do you drive?" />
+      <RadioButton fx:id="car" layoutX="57.0" layoutY="280.0" mnemonicParsing="false" text="Car">
+         <toggleGroup>
+            <ToggleGroup fx:id="vihecle" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="motorBike" layoutX="131.0" layoutY="280.0" mnemonicParsing="false" text="Motorcycle" toggleGroup="$vihecle" />
+      <RadioButton fx:id="bike" layoutX="231.0" layoutY="280.0" mnemonicParsing="false" text="Bicycle" toggleGroup="$vihecle" />
+      <Text layoutX="77.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is the delivery Area?" />
+      <ListView fx:id="list" layoutX="75.0" layoutY="342.0" prefHeight="100.0" prefWidth="200.0" />
+      <Button fx:id="save" layoutX="120.0" layoutY="574.0" mnemonicParsing="false" onAction="#save" text="Save" />
+      <TextField fx:id="firstName" layoutX="139.0" layoutY="100.0" />
+      <Text layoutX="58.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <Text layoutX="58.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" />
+      <Text layoutX="56.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Birth Date" />
+      <Text layoutX="58.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender" />
+      <TextField fx:id="lastName" layoutX="139.0" layoutY="140.0" />
+      <DatePicker fx:id="birthDay" layoutX="144.0" layoutY="181.0" promptText="date" />
+      <Text layoutX="21.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Delivery Person">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="male" layoutX="121.0" layoutY="217.0" mnemonicParsing="false" text="M">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="female" layoutX="175.0" layoutY="217.0" mnemonicParsing="false" text="F">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </RadioButton>
+   </children>
+</AnchorPane>

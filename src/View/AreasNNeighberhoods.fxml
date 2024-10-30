@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AreasNNeighberhoods">
+   <children>
+      <Label layoutX="136.0" layoutY="22.0" text="Areas and their neighberhoods">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="115.0" layoutY="69.0" text="Select area to manage " />
+      <ComboBox fx:id="area" layoutX="251.0" layoutY="65.0" prefWidth="150.0" />
+      <Button layoutX="544.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchToScenceBack" text="Back" />
+      <Button fx:id="removeArea" layoutX="432.0" layoutY="65.0" mnemonicParsing="false" onAction="#removeArea" text="Remove Area" />
+      <Button layoutX="442.0" layoutY="98.0" mnemonicParsing="false" onAction="#onEdit" text="Edit Area" />
+   </children>
+</AnchorPane>

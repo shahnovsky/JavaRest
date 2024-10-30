@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AddComponent">
+   <children>
+      <Label layoutX="164.0" layoutY="36.0" text="Add Component">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+      <HBox layoutX="174.0" layoutY="124.0" prefHeight="100.0" prefWidth="280.0">
+         <children>
+            <VBox prefHeight="100.0" prefWidth="133.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="117.0" text="Component Name:" />
+                  <Label text="Dairy?" />
+                  <Label text="Gluten?" />
+                  <Label text="Price" />
+               </children>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="152.0">
+               <children>
+                  <TextField fx:id="compName" />
+                  <CheckBox fx:id="dairyCB" mnemonicParsing="false" text="Contains dairy" />
+                  <CheckBox fx:id="glutenCB" mnemonicParsing="false" text="Contains gluten" />
+                  <TextField fx:id="price" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button fx:id="addComponent" layoutX="274.0" layoutY="285.0" mnemonicParsing="false" onAction="#addComponent" text="Create" />
+      <Button layoutX="509.0" layoutY="353.0" mnemonicParsing="false" onAction="#switchToScenceBack" text="Back" />
+   </children>
+</AnchorPane>

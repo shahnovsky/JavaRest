@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.CheckOutShoppingCart">
+   <children>
+      <Button fx:id="placeOrder" layoutX="255.0" layoutY="349.0" mnemonicParsing="false" onAction="#placeOrder" text="Place Order" />
+      <Button fx:id="back" layoutX="476.0" layoutY="349.0" mnemonicParsing="false" onAction="#switchToScenceBack" text="Back" />
+      <TableView fx:id="table" layoutX="178.0" layoutY="81.0" prefHeight="200.0" prefWidth="232.0">
+        <columns>
+          <TableColumn fx:id="dishColumn" prefWidth="142.0" text="Dish" />
+          <TableColumn fx:id="qtyColumn" minWidth="6.0" prefWidth="88.0" text="QTY" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="154.0" layoutY="8.0" text="Order Summary" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font size="44.0" />
+         </font>
+      </Label>
+      <Button fx:id="deleteButton" layoutX="239.0" layoutY="291.0" mnemonicParsing="false" onAction="#deleteSelectedOrders" text="Delete from order" />
+   </children>
+</AnchorPane>

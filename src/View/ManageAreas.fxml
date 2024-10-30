@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.ManageAreas">
+   <children>
+      <Label layoutX="193.0" layoutY="40.0" prefHeight="17.0" prefWidth="105.0" text="Area Name" />
+      <TextField fx:id="areaName" layoutX="316.0" layoutY="36.0" promptText="Area name" />
+      <ListView fx:id="neighListView" layoutX="93.0" layoutY="132.0" prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="personListView" layoutX="376.0" layoutY="132.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label alignment="CENTER" layoutX="272.0" layoutY="14.0" text="Manage Areas" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Label layoutX="87.0" layoutY="106.0" text="Select neighborhoods:" />
+      <Label layoutX="442.0" layoutY="106.0" text="Select personel:" />
+      <Label layoutX="193.0" layoutY="70.0" text="Drive time:" />
+      <TextField fx:id="driveTime" layoutX="316.0" layoutY="66.0" promptText="Drive time" />
+      <Button fx:id="backButton" layoutX="504.0" layoutY="353.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
+      <Button fx:id="createButton" layoutX="290.0" layoutY="353.0" mnemonicParsing="false" onAction="#onCreate" text="Create" />
+      <Line endX="-100.0" endY="226.0" layoutX="406.0" layoutY="107.0" startX="-100.0" startY="25.0" />
+      <Button fx:id="updateButton" layoutX="365.0" layoutY="353.0" mnemonicParsing="false" onAction="#onUpdate" text="Update" />
+   </children>
+</AnchorPane>

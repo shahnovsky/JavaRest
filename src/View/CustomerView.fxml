@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.CustomerView">
+   <children>
+      <Button fx:id="logOff" layoutX="517.0" layoutY="350.0" mnemonicParsing="false" onAction="#switchToScenceLogin" text="Log off" />
+      <HBox alignment="CENTER" layoutX="182.0" layoutY="59.0" prefHeight="36.0" prefWidth="403.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome ">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="customerName" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="!">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="169.0" layoutY="200.0" prefHeight="100.0" prefWidth="389.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="117.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Label text="Queries" />
+                  <Button fx:id="getRelevantDish" mnemonicParsing="false" onAction="#switchToScenceRelevantDish" text="getRelevantDish">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="getCookByExpert" mnemonicParsing="false" onAction="#switchToScenceCookByExpertise" text="getCookByExpert" />
+                  <Button fx:id="getPopularComponent" mnemonicParsing="false" onAction="#switchToScencePopularComponents" text="getPopularComponent" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Label text="Personal Info" />
+                  <Button fx:id="orders" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToScenceDisplayOrders" prefHeight="44.0" prefWidth="130.0" text="Orders with assigned delivery" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="updatePersonalData" mnemonicParsing="false" onAction="#switchToScenceEditPersonalInfo" text="update personal data" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Label text="Restaurant" />
+                  <Button fx:id="menu" mnemonicParsing="false" onAction="#switchToScenceMenu" text="Menu" />
+                  <Button fx:id="shoppingCart" mnemonicParsing="false" onAction="#switchToScenceShopCart" text="ShoppingCart" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
